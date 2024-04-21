@@ -68,15 +68,9 @@ func (g *Game) Render() {
 type Player struct {
 	positions []Vector2
 	pieces    int
+	direction int
 }
 
 type Apple struct {
 	pos Vector2
-}
-
-func main() {
-	// init the game
-	var g Game
-	g.Create(40, 20)
-	g.Render()
 }
