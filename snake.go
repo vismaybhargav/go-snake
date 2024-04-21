@@ -44,6 +44,7 @@ func (g *Game) Create(width int, height int) {
 }
 
 func (g *Game) Render() {
+	// Draw the top line border
 	for i := 0; i < g.width+2; i++ {
 		fmt.Print("#")
 	}
@@ -52,11 +53,12 @@ func (g *Game) Render() {
 	for i := 0; i < g.height; i++ {
 		fmt.Print("#")
 		for j := 0; j < g.width; j++ {
-			fmt.Print(g.grid[j][i])
+			fmt.Print(g.grid[j][i]) // idk why j and i are flipped
 		}
 		fmt.Println("#")
 	}
 
+	// Draw the bottom line border
 	for i := 0; i < g.width+2; i++ {
 		fmt.Print("#")
 	}
