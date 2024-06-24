@@ -12,7 +12,7 @@ type Game struct {
 	p             *Player
 }
 
-// Initializes the game given a width and height
+// Create Initializes the game given a width and height
 func (g *Game) Create(width int, height int) {
 	g.width = width
 	g.height = height
@@ -43,6 +43,7 @@ func (g *Game) Create(width int, height int) {
 	}
 }
 
+// Render Draws the game to the console
 func (g *Game) Render() {
 	// Draw the top line border
 	for i := 0; i < g.width+2; i++ {
@@ -63,6 +64,20 @@ func (g *Game) Render() {
 		fmt.Print("#")
 	}
 	fmt.Println("")
+}
+
+func (g *Game) RenderGame() {
+	for i := 0; i < g.width; i++ {
+		fmt.Print("#")
+	}
+}
+
+func PrintTriangle(n int) {
+	for i := 0; i < n; i++ {
+		for j := 0; j < i; j++ {
+
+		}
+	}
 }
 
 type Player struct {
