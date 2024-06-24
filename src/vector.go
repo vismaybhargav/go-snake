@@ -6,18 +6,18 @@ type Vector2 struct {
 	x, y int
 }
 
-func (v *Vector2) Add(ov *Vector2) *Vector2 {
-	v.x += ov.x
-	v.y += ov.y
-	return v
+func (vector *Vector2) Add(otherVector *Vector2) *Vector2 {
+	vector.x += otherVector.x
+	vector.y += otherVector.y
+	return vector
 }
 
-func (v *Vector2) Subtract(ov *Vector2) *Vector2 {
-	v.x -= ov.x
-	v.y -= ov.y
-	return v
+func (vector *Vector2) Subtract(otherVector *Vector2) *Vector2 {
+	vector.x -= otherVector.x
+	vector.y -= otherVector.y
+	return vector
 }
 
-func (v *Vector2) ToString() string {
-	return "[" + fmt.Sprint(v.x) + ", " + fmt.Sprint(v.y) + "]"
+func (vector *Vector2) ToString() string {
+	return "[" + fmt.Sprint(vector.x) + ", " + fmt.Sprint(vector.y) + "]"
 }
